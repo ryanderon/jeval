@@ -45,7 +45,7 @@ const App = () => {
               <TypeAnimation
                 sequence={[
                   "I wish for you to have a day filled with love and happiness.",
-                  ,
+
                   1000,
                   "I wish for you to feel loved and appreciated by those around you.",
                   1000,
