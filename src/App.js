@@ -1,25 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [showText, setShowText] = useState(false);
+  const [showWhishes, setShowWhishes] = useState(false);
+
+  const [clicked, setClicked] = useState(-1);
+
+  const handleClick = () => {
+    if (showText) {
+      setClicked(clicked + 1);
+    } else {
+      setShowText(true);
+    }
+  };
+
+  useEffect(() => {
+    document.title = "Happy Valentine's Day";
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet"
+      />
+
+      <div className="App">
+        <header className="App-header">
+          <div className="text-container">
+            <TypeAnimation sequence={["Hello Joshlyn!", 1000]} cursor={false} />
+            {showText && (
+              <TypeAnimation
+                sequence={["Happy Valentine's Day!", 1000]}
+                cursor={false}
+                style={{ marginTop: "12px" }}
+              />
+            )}
+          </div>
+          <div className="wishes-container">
+            {showWhishes && (
+              <TypeAnimation
+                sequence={[
+                  "I wish for you to have a day filled with love and happiness.",
+                  ,
+                  1000,
+                  "I wish for you to feel loved and appreciated by those around you.",
+                  1000,
+                  "I wish for you to receive a thoughtful gesture or gift from someone special in your life.",
+                  1000,
+                  "I wish for you to be able to spend quality time with the people you care about.",
+                  1000,
+                  "I wish for you to know how much you are loved and how much you mean to those around you.",
+                  1000,
+                  "from: @ryanderon",
+                  1000,
+                ]}
+              />
+            )}
+          </div>
+
+          {!showText && (
+            <button className="click-btn" onClick={() => setShowText(true)}>
+              !
+            </button>
+          )}
+          {!showWhishes && showText && (
+            <button className="wish-btn" onClick={() => setShowWhishes(true)}>
+              ?
+            </button>
+          )}
+        </header>
+      </div>
+    </>
   );
-}
+};
 
 export default App;

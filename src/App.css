@@ -1,20 +1,12 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: "Merriweather", serif;
+  /* font-family: "Roboto", sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +16,46 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.click-btn {
+  outline: none;
+  box-shadow: none;
+  font-family: "Merriweather", serif;
+  border: none;
+  font-size: 24px;
+  width: 80%;
+  background-color: #a23a61;
+  padding: 16px;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wish-btn {
+  outline: none;
+  box-shadow: none;
+  font-family: "Merriweather", serif;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  width: 50%;
+  background-color: #e26575;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.wishes-container {
+  width: 80%;
+  margin: 15px;
+  padding: 24px;
+}
+
+.text-container {
+  width: 80%;
+  padding: 24px;
+}
+
+.hello-text {
+  font-size: 24px;
+}
+
+.small-text {
+  font-size: 12px;
 }
