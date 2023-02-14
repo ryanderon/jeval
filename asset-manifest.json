@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jeval/static/css/main.4dbd585c.css",
+    "main.js": "/jeval/static/js/main.84b55b87.js",
+    "static/js/787.e6c7a158.chunk.js": "/jeval/static/js/787.e6c7a158.chunk.js",
+    "index.html": "/jeval/index.html",
+    "main.4dbd585c.css.map": "/jeval/static/css/main.4dbd585c.css.map",
+    "main.84b55b87.js.map": "/jeval/static/js/main.84b55b87.js.map",
+    "787.e6c7a158.chunk.js.map": "/jeval/static/js/787.e6c7a158.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dbd585c.css",
+    "static/js/main.84b55b87.js"
+  ]
+}
