@@ -6,16 +6,6 @@ const App = () => {
   const [showText, setShowText] = useState(false);
   const [showWhishes, setShowWhishes] = useState(false);
 
-  const [clicked, setClicked] = useState(-1);
-
-  const handleClick = () => {
-    if (showText) {
-      setClicked(clicked + 1);
-    } else {
-      setShowText(true);
-    }
-  };
-
   useEffect(() => {
     document.title = "Happy Valentine's Day";
   }, []);
@@ -31,7 +21,7 @@ const App = () => {
       <div className="App">
         <header className="App-header">
           <div className="text-container">
-            <TypeAnimation sequence={["Hello Joshlyn!", 1000]} cursor={false} />
+            <TypeAnimation sequence={["Hi there!", 1000]} cursor={false} />
             {showText && (
               <TypeAnimation
                 sequence={["Happy Valentine's Day!", 1000]}
