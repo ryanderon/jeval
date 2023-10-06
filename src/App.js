@@ -9,6 +9,7 @@ const App = () => {
   useEffect(() => {
     document.title = "Happy Valentine's Day";
   }, []);
+  
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +18,6 @@ const App = () => {
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap"
         rel="stylesheet"
       />
-
       <div className="App">
         <header className="App-header">
           <div className="text-container">
@@ -35,7 +35,6 @@ const App = () => {
               <TypeAnimation
                 sequence={[
                   "I wish for you to have a day filled with love and happiness.",
-
                   1000,
                   "I wish for you to feel loved and appreciated by those around you.",
                   1000,
@@ -51,7 +50,6 @@ const App = () => {
               />
             )}
           </div>
-
           {!showText && (
             <button className="click-btn" onClick={() => setShowText(true)}>
               !
